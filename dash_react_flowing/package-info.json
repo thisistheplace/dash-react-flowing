@@ -1,6 +1,6 @@
 {
   "name": "dash_react_flowing",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "react-flow built into a Dash component",
   "repository": {
     "type": "git",
