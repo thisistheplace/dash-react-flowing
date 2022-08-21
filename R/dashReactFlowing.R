@@ -1,9 +1,9 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 #' @export
-dashReactFlowing <- function(id=NULL, label=NULL, value=NULL) {
+dashReactFlowing <- function(id=NULL, defaultEdgeOptions=NULL, edges=NULL, fitViewOptions=NULL, nodes=NULL, style=NULL) {
     
-    props <- list(id=id, label=label, value=value)
+    props <- list(id=id, defaultEdgeOptions=defaultEdgeOptions, edges=edges, fitViewOptions=fitViewOptions, nodes=nodes, style=style)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -11,7 +11,7 @@ dashReactFlowing <- function(id=NULL, label=NULL, value=NULL) {
         props = props,
         type = 'DashReactFlowing',
         namespace = 'dash_react_flowing',
-        propNames = c('id', 'label', 'value'),
+        propNames = c('id', 'defaultEdgeOptions', 'edges', 'fitViewOptions', 'nodes', 'style'),
         package = 'dashReactFlowing'
         )
 
