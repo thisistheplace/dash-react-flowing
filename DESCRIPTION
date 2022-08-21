@@ -1,0 +1,13 @@
+Package: dashReactFlowing
+Title: react-flow built into a Dash component
+Version: 0.0.1
+Description: react-flow built into a Dash component
+Depends: R (>= 3.0.2)
+Imports: 
+Suggests: 
+License: GPL-3.0 + file LICENSE
+URL: https://github.com/thisistheplace/dash-react-flowing
+BugReports: https://github.com/thisistheplace/dash-react-flowing/issues
+Encoding: UTF-8
+LazyData: true
+KeepSource: true
