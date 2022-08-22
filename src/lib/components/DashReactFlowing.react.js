@@ -4,7 +4,8 @@ import ReactFlow, {
   Controls,
   addEdge,
   useEdgesState,
-  applyNodeChanges
+  applyNodeChanges,
+  onNodeClick
 } from 'react-flow-renderer'
 
 const DashReactFlowing = (props) => {
@@ -30,12 +31,19 @@ const DashReactFlowing = (props) => {
       setNodes(
         (nds) => {
           const newnodes = applyNodeChanges(changes, nds)
-          setProps({ nodes: newnodes })
           return newnodes
         }
       )
     },
     [setProps, setNodes]
+  )
+
+  // Update node props when component has been dragged
+  const onNodeDragStop = useCallback(
+    (clicked) => {
+      setProps({ nodes: currentNodes })
+    },
+    [setProps, currentNodes]
   )
 
   const onConnect = useCallback(
@@ -58,6 +66,7 @@ const DashReactFlowing = (props) => {
       edges={currentEdges}
       onNodesChange={onNodesChange}
       onEdgesChange={onEdgesChange}
+      onNodeDragStop={onNodeDragStop}
       onConnect={onConnect}
       fitViewOptions={fitViewOptions}
       defaultEdgeOptions={defaultEdgeOptions}
